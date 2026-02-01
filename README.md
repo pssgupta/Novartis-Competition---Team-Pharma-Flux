@@ -1,5 +1,8 @@
 # Novartis-Competition---Team-Pharma-Flux
 Working solution for Novartis use cases with documented methodology and results.
+**Live Demo**
+• Landing Page: https://novaratis-landing-page.vercel.app/ 
+• Dashboard Application: https://novaratis-app.vercel.app/
 
 This repository contains the final, cleaned, and reproducible prototype developed for Problem Statement 1 of the Novaratis competition.
 **The project implements an AI-assisted clinical trial operations control system that transforms fragmented clinical and operational data into actionable, explainable, and auditable insights. The solution focuses on standardized data flows, real-time operational visibility, governed decision-making, and natural language access to data using a GenAI-powered assistant.**
