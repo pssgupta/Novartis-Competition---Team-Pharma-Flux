@@ -1,7 +1,9 @@
 # Novartis-Competition---Team-Pharma-Flux
 Working solution for Novartis use cases with documented methodology and results.
 **Live Demo**
+
 • Landing Page: https://novaratis-landing-page.vercel.app/ 
+
 • Dashboard Application: https://novaratis-app.vercel.app/
 
 This repository contains the final, cleaned, and reproducible prototype developed for Problem Statement 1 of the Novaratis competition.
