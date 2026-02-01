@@ -1,0 +1,16 @@
+{
+    "weights": {
+        "Safety": 0.30,
+        "EDC Completeness": 0.25,
+        "Query Health": 0.20,
+        "Visit Compliance": 0.15,
+        "Lab Integrity": 0.10,
+        "Coding Readiness": 0.15
+    },
+    "severity_thresholds": {
+        "Low": 0.2,
+        "Medium": 0.5,
+        "High": 0.8,
+        "Critical": 1.0
+    }
+}

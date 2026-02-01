@@ -1,0 +1,48 @@
+InputFileType,SheetName,InputColumn,CanonicalEntity,CanonicalField,TransformationRule
+EDC_Metrics,Query Report - Cumulative,Study,Study,StudyID,Direct copy
+EDC_Metrics,Query Report - Cumulative,Region,Site,Region,Direct copy
+EDC_Metrics,Query Report - Cumulative,Country,Site,Country,Direct copy
+EDC_Metrics,Query Report - Cumulative,Site Number,Site,SiteID,Direct copy
+EDC_Metrics,Query Report - Cumulative,Site ID,Site,SiteID,Direct copy
+EDC_Metrics,Query Report - Cumulative,Subject Name,Subject,SubjectID,Direct copy
+EDC_Metrics,Query Report - Cumulative,Folder Name,Visit,VisitName,Direct copy
+EDC_Metrics,Query Report - Cumulative,Form,Form,FormName,Direct copy
+EDC_Metrics,Query Report - Cumulative,Field OID,Query,FieldOID,Direct copy
+EDC_Metrics,Query Report - Cumulative,Query Status,Query,QueryStatus,"Normalize to [Open, Answered, Closed]"
+EDC_Metrics,Query Report - Cumulative,Marking Group Name,Query,MarkingGroup,Direct copy
+EDC_Metrics,Query Report - Cumulative,Query Open Date,Query,OpenDate,Format as ISO8601
+EDC_Metrics,Query Report - Cumulative,Query Response Date,Query,ResponseDate,Format as ISO8601
+GlobalCodingReport_MedDRA,GlobalCodingReport_MedDRA,MedDRA Coding Report,Coding,Dictionary,"Set to ""MedDRA"""
+GlobalCodingReport_MedDRA,GlobalCodingReport_MedDRA,Dictionary Version number,Coding,DictionaryVersion,Direct copy
+GlobalCodingReport_MedDRA,GlobalCodingReport_MedDRA,Logline,Coding,VerbatimTerm,Direct copy
+GlobalCodingReport_MedDRA,GlobalCodingReport_MedDRA,Coding Status,Coding,CodingStatus,Direct copy
+Missing_Lab_Name,Missing_Lab_Name_and_Missing,Lab category,Lab,LabCategory,Direct copy
+Missing_Lab_Name,Missing_Lab_Name_and_Missing,Issue,Lab,IssueType,Direct copy
+Missing_Lab_Name,Missing_Lab_Name_and_Missing,Comments,Lab,IssueType,Append to IssueType if present
+Missing_Pages,All Pages Missing,Study Name,Study,StudyID,Direct copy
+Missing_Pages,All Pages Missing,SiteNumber,Site,SiteID,Direct copy
+Missing_Pages,All Pages Missing,Site Number,Site,SiteID,Direct copy
+Missing_Pages,All Pages Missing,SubjectName,Subject,SubjectID,Direct copy
+Missing_Pages,All Pages Missing,Subject Name,Subject,SubjectID,Direct copy
+Missing_Pages,All Pages Missing,Visit Name,Visit,VisitName,Direct copy
+Missing_Pages,All Pages Missing,FolderName,Visit,VisitName,Direct copy
+Missing_Pages,All Pages Missing,Page Name,Form,FormName,Direct copy
+Missing_Pages,All Pages Missing,FormName,Form,FormName,Direct copy
+Missing_Pages,All Pages Missing,# of Days Missing,Form,DaysMissing,Cast to Integer
+Visit_Projection,Missing Visits,Projected Date,Visit,ProjectedDate,Format as ISO8601
+Visit_Projection,Missing Visits,# Days Outstanding,Visit,DaysOutstanding,Cast to Integer
+eSAE_Dashboard,SAE Dashboard_DM,Discrepancy ID,Query,QueryID,Direct copy
+eSAE_Dashboard,SAE Dashboard_DM,Discrepancy Created Timestamp in Dashboard,Query,OpenDate,Format as ISO8601
+eSAE_Dashboard,SAE Dashboard_Safety,Case Status,Safety,CaseStatus,Direct copy
+GlobalCodingReport_WHODrug,GlobalCodingReport_WHODD,WHODrug Coding Report,Coding,Dictionary,"Set to ""WHODrug"""
+GlobalCodingReport_WHODrug,GlobalCodingReport_WHODD,Dictionary Version number,Coding,DictionaryVersion,Direct copy
+GlobalCodingReport_WHODrug,GlobalCodingReport_WHODD,Logline,Coding,VerbatimTerm,Direct copy
+GlobalCodingReport_WHODrug,GlobalCodingReport_WHODD,Coding Status,Coding,CodingStatus,Direct copy
+Inactivated_Records,Inactivated Forms,Subject,Subject,SubjectID,Normalize ID
+Inactivated_Records,Inactivated Forms,Folder,Inactivation,Folder,Direct copy
+Inactivated_Records,Inactivated Forms,Form,Inactivation,Form,Direct copy
+Inactivated_Records,Inactivated Forms,RecordPosition,Inactivation,RecordPosition,Direct copy
+Inactivated_Records,Inactivated Forms,Audit Action,Inactivation,AuditAction,Direct copy
+EDRR,OpenIssuesSummary,Study,Study,StudyID,Direct copy
+EDRR,OpenIssuesSummary,Subject,Subject,SubjectID,Direct copy
+EDRR,OpenIssuesSummary,Total Open issue Count per subject,Subject,OpenIssueCount,Cast to Integer

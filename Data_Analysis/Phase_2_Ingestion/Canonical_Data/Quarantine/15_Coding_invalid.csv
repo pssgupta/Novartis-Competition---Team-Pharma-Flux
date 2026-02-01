@@ -1,0 +1,7 @@
+Dictionary,DictionaryVersion,VerbatimTerm,CodingStatus,error
+MedDRA,28.1,1,Coded Term,1 is not of type 'string'
+MedDRA,,2,UnCoded Term,2 is not of type 'string'
+MedDRA,28.1,1,Coded Term,1 is not of type 'string'
+MedDRA,28.1,1,Coded Term,28.1 is not of type 'string'
+MedDRA,,2,UnCoded Term,nan is not of type 'string'
+MedDRA,28.1,1,Coded Term,28.1 is not of type 'string'

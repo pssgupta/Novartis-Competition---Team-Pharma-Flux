@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Clinical Trial Data Canonical Schema",
+  "version": "1.1.0",
+  "description": "Standardized schema for cross-study comparison of clinical trial operational data.",
+  "definitions": {
+    "Study": {
+      "type": "object",
+      "properties": {
+        "StudyID": { "type": "string", "description": "Unique identifier for the study (e.g., Study 1)" },
+        "ProtocolID": { "type": "string" },
+        "Phase": { "type": "string" }
+      },
+      "required": ["StudyID"]
+    },
+    "Site": {
+      "type": "object",
+      "properties": {
+        "SiteID": { "type": "string", "description": "Unique identifier for the site within the study" },
+        "Country": { "type": "string", "description": "Country code (ISO 3166-1 alpha-3 preferred)" },
+        "Region": { "type": "string" },
+        "SiteName": { "type": "string" }
+      },
+      "required": ["SiteID"]
+    },
+    "Subject": {
+      "type": "object",
+      "properties": {
+        "SubjectID": { "type": "string", "description": "Unique identifier for the subject" },
+        "SubjectStatus": { "type": "string", "enum": ["Screened", "Enrolled", "Randomized", "Completed", "Discontinued", "Withdrawn"] },
+        "OpenIssueCount": { "type": "integer" }
+      },
+      "required": ["SubjectID"]
+    },
+    "Visit": {
+      "type": "object",
+      "properties": {
+        "VisitName": { "type": "string", "description": "Name of the visit (e.g., Visit 1, Week 4)" },
+        "VisitOID": { "type": "string" },
+        "VisitDate": { "type": "string", "format": "date", "description": "ISO 8601 date (YYYY-MM-DD)" },
+        "ProjectedDate": { "type": "string", "format": "date" },
+        "DaysOutstanding": { "type": "integer" }
+      }
+    },
+    "Form": {
+      "type": "object",
+      "properties": {
+        "FormName": { "type": "string", "description": "Name of the CRF form" },
+        "FormOID": { "type": "string" },
+        "PageStatus": { "type": "string", "enum": ["Empty", "Partial", "Complete", "Verified", "Frozen", "Locked"] },
+        "IsMissing": { "type": "boolean" },
+        "DaysMissing": { "type": "integer" }
+      }
+    },
+    "Query": {
+      "type": "object",
+      "properties": {
+        "QueryID": { "type": "string", "description": "Unique identifier for the query/discrepancy" },
+        "FieldOID": { "type": "string" },
+        "QueryStatus": { "type": "string", "enum": ["Open", "Answered", "Closed", "Cancelled"] },
+        "QueryType": { "type": "string", "enum": ["Manual", "System", "Candidate"] },
+        "QueryText": { "type": "string" },
+        "MarkingGroup": { "type": "string", "description": "Group responsible for the query (e.g., DM, CRA, Safety)" },
+        "OpenDate": { "type": "string", "format": "date-time" },
+        "ResponseDate": { "type": "string", "format": "date-time" },
+        "DaysOpen": { "type": "integer" }
+      }
+    },
+    "Lab": {
+      "type": "object",
+      "properties": {
+        "TestName": { "type": "string", "description": "Local name of the lab test" },
+        "StandardTestCode": { "type": "string", "description": "LOINC or internal standard code" },
+        "LabCategory": { "type": "string" },
+        "LabDate": { "type": "string", "format": "date" },
+        "IssueType": { "type": "string", "description": "e.g., Missing Range, Missing Name" }
+      }
+    },
+    "Coding": {
+      "type": "object",
+      "properties": {
+        "Dictionary": { "type": "string", "enum": ["MedDRA", "WHODrug"] },
+        "DictionaryVersion": { "type": "string" },
+        "VerbatimTerm": { "type": "string", "description": "The term as reported in the CRF (Logline)" },
+        "CodingStatus": { "type": "string" },
+        "RequireCoding": { "type": "boolean" }
+      }
+    },
+    "Safety": {
+      "type": "object",
+      "properties": {
+          "CaseID": { "type": "string" },
+          "CaseStatus": { "type": "string" },
+          "ReviewStatus": { "type": "string" }
+      }
+    },
+    "Inactivation": {
+      "type": "object",
+      "properties": {
+        "Folder": { "type": "string" },
+        "Form": { "type": "string" },
+        "RecordPosition": { "type": "string" },
+        "AuditAction": { "type": "string" }
+      }
+    }
+  }
+}
